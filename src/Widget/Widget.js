@@ -20,7 +20,7 @@ class Widget extends React.Component {
 
     async componentDidMount() {
         try {
-            const response = await fetch('config.json', { method: 'POST', redirect: 'follow'});
+            const response = await fetch('config.json');
             const config = await response.json();
 
             this.setState({ config }, () => {
