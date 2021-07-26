@@ -1,6 +1,7 @@
 {
   "version": "1.0.0",
   "rootName": "",
+  "label": "Message Us",
   "items": [
     { "id": 0, "@type": "sms", "name": "SMS", "quick": true, "url": "sms:+15551234567?&body=Hello!" },
     { "id": 1, "@type": "call", "name": "Call", "quick": false, "url": "tel:+15551234567" },
