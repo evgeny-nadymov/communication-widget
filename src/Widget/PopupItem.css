@@ -1,0 +1,37 @@
+.widget-popup-item {
+    width: 160px;
+    height: 48px;
+    box-shadow: 0 8px 12px rgb(0 0 0 / 6%);
+    border-radius: 50px;
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    cursor: pointer;
+    padding: 8px 16px;
+    box-sizing: border-box;
+    transition: /*color 0ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,*/ transform 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    will-change: color, transform, opacity;
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.widget-popup-open .widget-popup-item {
+    transform: scale(1.0);
+    opacity: 1;
+}
+
+.widget-popup-item svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.widget-popup-item p {
+    color: black;
+}
+
+.widget-popup-item:hover {
+    color: #61dafb;
+}

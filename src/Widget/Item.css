@@ -1,0 +1,16 @@
+.widget-item {
+    background: transparent;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    will-change: transform;
+}
+
+.widget-item svg {
+    width: 24px;
+    height: 24px;
+}

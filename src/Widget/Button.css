@@ -1,0 +1,76 @@
+.widget-button {
+    cursor: pointer;
+    padding: 16px;
+    height: 64px;
+    width: 64px;
+    margin: 0;
+    border-radius: 32px;
+    background: white;
+    color: rgba(0, 0, 0, 0.54);
+    border: 0;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 15%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    transition: width 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transform: scale(1);
+    opacity: 1;
+    will-change: width, opacity, transform;
+}
+
+.widget-button-background {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 16px;
+    min-width: 160px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.widget-button-hidden {
+    transform: scale(0);
+    opacity: 0;
+}
+
+.widget-button-expanded {
+
+}
+
+.widget-button-expanded .widget-button-items {
+    transform: translateX(-48px);
+    opacity: 1;
+}
+
+.widget-button-items {
+    margin-left: 16px;
+    display: flex;
+    flex-direction: row;
+    opacity: 0;
+    transition: transform 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    will-change: transform;
+}
+
+.widget-button-title {
+    margin-left: 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    transition: transform 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    will-change: transform, color;
+}
+
+.widget-item:hover {
+    color: #61dafb;
+    transform: scale(1.27);
+}
+
+.widget-button-title:hover {
+    color: #61dafb;
+    transform: scale(1.1);
+}

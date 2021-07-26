@@ -1,0 +1,14 @@
+.widget-popup {
+    position: absolute;
+    bottom: 96px;
+    right: 0;
+    margin: 0 16px;
+    /*display: none;*/
+    pointer-events: none;
+    /*opacity: 0;*/
+}
+
+.widget-popup-open {
+    /*display: initial;*/
+    pointer-events: initial;
+}
