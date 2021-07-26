@@ -11,18 +11,66 @@ class Widget extends React.Component {
 
         this.buttonRef = React.createRef();
 
+        this.state = {
+            config: null
+        };
+
         this.handleDocumentScroll = throttle(this.handleDocumentScroll, SCROLL_THROTTLE_TIMEOUT_MS);
     }
 
-    componentDidMount() {
-        document.addEventListener('scroll', this.handleDocumentScroll);
+    async componentDidMount() {
+        try {
+            const response = await fetch('config.json', { method: 'POST', redirect: 'follow'});
+            const config = await response.json();
+
+            this.setState({ config }, () => {
+                this.attachScroll();
+            });
+
+        } catch (e) {
+            console.error('[config] fetch', e);
+        }
     }
 
     componentWillUnmount() {
-        document.removeEventListener('scroll', this.handleDocumentScroll);
+        this.detachScroll();
     }
 
-    handleDocumentScroll = () => {
+    attachScroll() {
+        const { config } = this.state;
+        if (!config) return;
+
+        const { rootName } = config;
+        if (rootName) {
+            const root = document.getElementById(rootName);
+            if (root) {
+                root.addEventListener('scroll', this.handleScroll);
+
+                return;
+            }
+        }
+
+        document.addEventListener('scroll', this.handleScroll);
+    }
+
+    detachScroll() {
+        const { config } = this.state;
+        if (!config) return;
+
+        const { rootName } = config;
+        if (rootName) {
+            const root = document.getElementById(rootName);
+            if (root) {
+                root.removeEventListener('scroll', this.handleScroll);
+
+                return;
+            }
+        }
+
+        document.removeEventListener('scroll', this.handleScroll);
+    }
+
+    handleScroll = () => {
         const button = this.buttonRef.current;
         if (!button) return;
 
@@ -52,10 +100,10 @@ class Widget extends React.Component {
     }
 
     render() {
-        const { params } = this.props;
-        if (!params) return null;
+        const { config } = this.state;
+        if (!config) return null;
 
-        const { items } = params;
+        const { label, items } = config;
         if (!items) return null;
         if (!items.length) return null;
 
@@ -66,14 +114,14 @@ class Widget extends React.Component {
                 <button onClick={this.handleExpanded}>Expanded</button>
                 <button onClick={this.handleHidden}>Hidden</button>
 
-                <Button ref={this.buttonRef} items={items}/>
+                <Button ref={this.buttonRef} label={label || 'Message Us'} items={items}/>
             </div>
         );
     }
 }
 
 Widget.propTypes = {
-    params: PropTypes.object.isRequired
+
 };
 
 export default Widget;

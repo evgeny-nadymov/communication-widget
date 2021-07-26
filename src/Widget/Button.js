@@ -165,11 +165,10 @@ class Button extends React.Component {
     }
 
     render() {
-        let { items } = this.props;
+        const { label, items } = this.props;
         const { buttonState } = this.state;
 
         let width = null;
-        let popup = null;
         let className;
         let quickItems = items;
         let moreInfo = null;
@@ -189,11 +188,6 @@ class Button extends React.Component {
             }
             case ButtonStateEnum.opened: {
                 className = 'widget-button-opened';
-                popup = (
-                    <div className='widget-button-popup'>
-                        {items.map(x => <PopupItem key={x.id} info={x} onClick={this.handlePopupItemClick}/>)}
-                    </div>
-                );
                 break;
             }
             default: {
@@ -215,7 +209,7 @@ class Button extends React.Component {
                         <div className='widget-button-items'>
                             {quickItems.map(x => <Item key={x.id} info={x} onClick={this.handlePopupItemClick}/>)}
                             {Boolean(moreInfo) && <Item info={moreInfo} onClick={() => { }}/>}
-                            <div className='widget-button-title'>Message Us</div>
+                            <div className='widget-button-title'>{label}</div>
                         </div>
                     </button>
                 </div>
@@ -232,7 +226,12 @@ class Button extends React.Component {
 }
 
 Button.propTypes = {
+    label: PropTypes.string,
     items: PropTypes.array.isRequired
 };
+
+Button.defaultProps = {
+    label: 'Connect Us'
+}
 
 export default Button;
