@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/communication-widget/static/css/main.059fcba0.chunk.css",
+    "main.js": "/communication-widget/static/js/main.70db9964.chunk.js",
+    "main.js.map": "/communication-widget/static/js/main.70db9964.chunk.js.map",
+    "runtime-main.js": "/communication-widget/static/js/runtime-main.a9d149b2.js",
+    "runtime-main.js.map": "/communication-widget/static/js/runtime-main.a9d149b2.js.map",
+    "static/js/2.6907a17e.chunk.js": "/communication-widget/static/js/2.6907a17e.chunk.js",
+    "static/js/2.6907a17e.chunk.js.map": "/communication-widget/static/js/2.6907a17e.chunk.js.map",
+    "index.html": "/communication-widget/index.html",
+    "static/css/main.059fcba0.chunk.css.map": "/communication-widget/static/css/main.059fcba0.chunk.css.map",
+    "static/js/2.6907a17e.chunk.js.LICENSE.txt": "/communication-widget/static/js/2.6907a17e.chunk.js.LICENSE.txt",
+    "static/media/Close.6a19babf.svg": "/communication-widget/static/media/Close.6a19babf.svg",
+    "static/media/Email.053fcd9a.svg": "/communication-widget/static/media/Email.053fcd9a.svg",
+    "static/media/Messenger.355b9460.svg": "/communication-widget/static/media/Messenger.355b9460.svg",
+    "static/media/More.f2cfe9dd.svg": "/communication-widget/static/media/More.f2cfe9dd.svg",
+    "static/media/Phone.0581980b.svg": "/communication-widget/static/media/Phone.0581980b.svg",
+    "static/media/Sms.2bad09c2.svg": "/communication-widget/static/media/Sms.2bad09c2.svg",
+    "static/media/Telegram.06804f56.svg": "/communication-widget/static/media/Telegram.06804f56.svg",
+    "static/media/WhatsApp.e9ea749e.svg": "/communication-widget/static/media/WhatsApp.e9ea749e.svg",
+    "static/media/logo.6ce24c58.svg": "/communication-widget/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a9d149b2.js",
+    "static/js/2.6907a17e.chunk.js",
+    "static/css/main.059fcba0.chunk.css",
+    "static/js/main.70db9964.chunk.js"
+  ]
+}
