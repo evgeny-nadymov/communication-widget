@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "rootName": "",
+  "items": [
+    { "id": 0, "@type": "sms", "name": "SMS", "quick": true, "url": "sms:+15551234567?&body=Hello!" },
+    { "id": 1, "@type": "call", "name": "Call", "quick": false, "url": "tel:+15551234567" },
+    { "id": 2, "@type": "email", "name": "E-mail", "quick": false, "url": "mailto:evgeny.nadymov@gmail.com" },
+    { "id": 3, "@type": "whatsapp", "name": "WhatsApp", "quick": true, "url": "https://wa.me/15551234567" },
+    { "id": 4, "@type": "messenger", "name": "Messenger", "quick": true, "url": "https://m.me/1143565931" },
+    { "id": 5, "@type": "telegram", "name": "Telegram", "quick": false, "url": "https://t.me/nadymov" }
+  ]
+}
